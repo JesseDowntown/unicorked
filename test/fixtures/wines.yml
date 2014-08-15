@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  type: 
+  year: 
+  picture: MyString
+  rating: 1
+  description: MyText
+  color: MyString
+  bubbly: false
+
+two:
+  brand: MyString
+  type: 
+  year: 
+  picture: MyString
+  rating: 1
+  description: MyText
+  color: MyString
+  bubbly: false
