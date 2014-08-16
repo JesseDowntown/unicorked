@@ -1,6 +1,9 @@
 #landing {
   .content {
     #drink {
+      width: 300px;
+      margin-left: 25%;
+      margin-top: 20%;
       .btn-xlarge {
         padding: 25px 28px;
         font-size: 2em;
@@ -24,9 +27,6 @@
       .btn-xlarge:focus {
         outline: none;
       }
-      width: 300px;
-      margin-left: 25%;
-      margin-top: 20%;
     }
   }
 }
