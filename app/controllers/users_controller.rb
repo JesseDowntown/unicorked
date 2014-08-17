@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def dashboard
+    @wines = Wine.all
+    @red_wines = Wine.where(color: 'red')
+    @white_wines = Wine.where(color: 'white')
+  end
+
   # GET /users
   # GET /users.json
   def index

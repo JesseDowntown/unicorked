@@ -13,6 +13,22 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Merienda+One);
+
+html, body, .container { 
+  height: 100%;
+}
+html, body {
+  background: #575757;
+}
+.container {
+  background: black;
+  border: solid #ccc 3px;
+  outline: 1px solid #ccc;
+  outline-offset: -7px;
+}
+body > .main { height: auto; min-height: 100%; }
+.main { padding-bottom: 4em; }
 
 #footer { 
   clear: both;
@@ -25,17 +41,39 @@
   width: 15%;
   text-align: center; 
 }
+
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
-html, body, .container { 
-  background: #575757;
-  height: 100%;
-}
-body > .main { height: auto; min-height: 100%; }
-.main { padding-bottom: 3em; }
 
-@import url(http://fonts.googleapis.com/css?family=Merienda+One);
-// @font-face {
-//   font-family: 'Riesling';
-//   src: url('assets/riesling.ttf');
-// }
+.navbar {
+  margin-bottom: 0px;
+  background: linear-gradient(#eeeeee,#ffffff);
+}
+
+.silver-btn {
+  width: 300px;
+  .btn-xlarge {
+    padding: 25px 28px;
+    font-size: 2em;
+    line-height: normal;
+    border-radius: 8px;
+    background: radial-gradient(#d3d3d3, #4e4e4e);
+    border: solid 1px #757575;
+    box-shadow: inset 0 10px 15px 0 #9a9a9a;
+    color: #555;
+    font-family: 'Merienda One', cursive;
+  }
+  .btn-xlarge:hover {
+    background: radial-gradient(#bdbdbd, #4e4e4e);
+  }
+  .btn-xlarge:active {
+    background: linear-gradient(#4e4e4e, #7e7e7e);
+    border: solid 1px #757575;
+    box-shadow: inset 0 10px 15px 0 #8a8a8a;
+    color: #bbb;
+  }
+  .btn-xlarge:focus {
+    outline: none;
+  }
+}
+

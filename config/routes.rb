@@ -1,9 +1,10 @@
 Unicorked::Application.routes.draw do
 
-  get "landing/welcome"
   root 'landing#welcome'
 
-  resources :users
+  # resources :users
+
+  get 'users/dashboard' => 'users#dashboard', as: :dashboard
 
   resources :wines
 
