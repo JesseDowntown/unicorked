@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'better_errors'
 gem 'hirb'
+gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
