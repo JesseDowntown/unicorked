@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140815215346) do
 
   create_table "wines", force: true do |t|
     t.string   "brand"
-    t.string   "type"
+    t.string   "grape_variety"
     t.integer  "year"
     t.string   "picture"
     t.string   "price"

@@ -15,7 +15,7 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Merienda+One);
 
-html, body, .container { 
+html, body, .container, .main { 
   height: 100%;
 }
 html, body {
@@ -26,16 +26,17 @@ html, body {
   border: solid #ccc 3px;
   outline: 1px solid #ccc;
   outline-offset: -7px;
+  margin-top: 40px;
 }
 body > .main { height: auto; min-height: 100%; }
-.main { padding-bottom: 4em; }
+.main { padding-bottom: 10em; }
 
 #footer { 
   clear: both;
   position: relative;
   z-index: 10;
   height: 4em;
-  margin-top: -4em;
+  margin-top: -10em;
   margin-left: auto;
   margin-right: auto;
   width: 15%;
@@ -46,34 +47,36 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 
 .navbar {
-  margin-bottom: 0px;
+  height: 60px;
   background: linear-gradient(#eeeeee,#ffffff);
+  .container-fluid {
+    margin-top: 5px;
+  }
 }
 
 .silver-btn {
+  background: radial-gradient(#d3d3d3, #4e4e4e);
+  border: solid 1px #757575;
+  box-shadow: inset 0 10px 15px 0 #9a9a9a;
+  font-family: 'Merienda One', cursive;
+  border-radius: 8px;
+  color: #555;
+}
+.btn-xlarge {
   width: 300px;
-  .btn-xlarge {
-    padding: 25px 28px;
-    font-size: 2em;
-    line-height: normal;
-    border-radius: 8px;
-    background: radial-gradient(#d3d3d3, #4e4e4e);
-    border: solid 1px #757575;
-    box-shadow: inset 0 10px 15px 0 #9a9a9a;
-    color: #555;
-    font-family: 'Merienda One', cursive;
-  }
-  .btn-xlarge:hover {
-    background: radial-gradient(#bdbdbd, #4e4e4e);
-  }
-  .btn-xlarge:active {
-    background: linear-gradient(#4e4e4e, #7e7e7e);
-    border: solid 1px #757575;
-    box-shadow: inset 0 10px 15px 0 #8a8a8a;
-    color: #bbb;
-  }
-  .btn-xlarge:focus {
-    outline: none;
-  }
+  padding: 25px 28px;
+  font-size: 2em;
+  line-height: normal;
+}
+.silver-btn:hover {
+  background: radial-gradient(#bdbdbd, #4e4e4e);
+}
+.silver-btn:active {
+  background: linear-gradient(#4e4e4e, #7e7e7e);
+  border: solid 1px #757575;
+  box-shadow: inset 0 10px 15px 0 #8a8a8a;
+}
+.silver-btn:focus {
+  outline: none;
 }
 

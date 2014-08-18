@@ -1,0 +1,38 @@
+.form-wrapper {
+  height: 500px;
+  border-bottom: solid 1px #911d1d;
+  border-top: solid 1px #911d1d;
+}
+
+form {
+  input {
+    padding: 10px;
+  }
+  label, .control-label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .left-column {
+    float: left;
+  }
+  .right-column {
+    float: left;
+    margin-left: 100px;
+  }
+  .controls .radio {
+    padding-right: 30px;
+    font-size: 18px;
+    padding-top: 5px;
+  }
+  .last-item {
+    margin-bottom: 20px;
+  }
+  .silver-btn {
+    margin-top: 350px;
+    margin-left: 170px;
+  }
+}
