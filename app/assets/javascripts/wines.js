@@ -3,10 +3,22 @@
 
 $(document).ready(function(){
 
-  $('.color-selector').change(function(){
-    var selectedColor = $("input:checked").val();
+  function createGrapeVarietyOptions(array) {
+    // add array as a collection of options to the form
+    $.each(array, function(index, value) {
+      $('#wine_grape_variety').append('<option value='+index+'>'+value+'</option>' );
+    });
+  }
 
-    console.log('the color is:' + selected);
+  $('.color-selector').change(function(){
+    // grab value from radio buttons
+    var selectedColor = $("input:checked").val();
+    // clear out existing collection
+    $('#wine_grape_variety').empty();
+    // request data for collection
+    $.get("/get_grape_varieties", { color: selectedColor }, function (data) {
+          createGrapeVarietyOptions(data);
+      }, "json");
   });
 
 });
