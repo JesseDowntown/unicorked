@@ -7,6 +7,7 @@ Unicorked::Application.routes.draw do
   get 'users/dashboard' => 'users#dashboard', as: :dashboard
 
   resources :wines
+  get 'get_grape_varieties' => 'wines#get_grape_varieties'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

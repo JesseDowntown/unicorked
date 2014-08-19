@@ -1,4 +1,4 @@
-  <%= simple_form_for @wine, html: {class: 'form-inline' } do |f| %>
+f  <%= simple_form_for @wine, html: {class: 'form-inline' } do |f| %>
     <% if @wine.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@wine.errors.count, "error") %> prohibited this wine from being saved:</h2>
@@ -11,8 +11,8 @@
       </div>
     <% end %>
     <div class='left-column'>
-      <%= f.input :color, as: :radio_buttons, collection: ['Red', 'White', 'Rose'], wrapper_class: 'color-selector' %>
-      <%= f.input :grape_variety, collection: ['Sauvignon Blanc', 'Riesling', 'Cabernet Sauvignon', 'Moscato', 'Merlot', 'Pinot Noir', 'Syrah', 'Chardonnay', 'Pinot Grigio', 'Zinfandel', 'Shiraz', 'Chenin Blanc'].sort %>
+      <%= f.input :color, as: :radio_buttons, collection: ['Red', 'White', 'Rosé'], wrapper_class: 'color-selector' %>
+      <%= f.input :grape_variety, collection: ['1st select a color'], include_blank: false %>
       <%= f.input :brand %>
       <%= f.input :year, collection: 2000..2020, include_blank: true %>
       <%= f.input :picture, as: :file %>

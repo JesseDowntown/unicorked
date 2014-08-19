@@ -61,6 +61,44 @@ class WinesController < ApplicationController
     end
   end
 
+  def get_grape_varieties
+    grape_varieties = []
+    if params[:color] == 'Red'
+      grape_varieties = [
+        'Merlot', 
+        'Cabernet Sauvignon', 
+        'Pinot Noir', 
+        'Syrah', 
+        'Shiraz', 
+        'Zinfandel'
+        ].sort
+      respond_to do |format|
+        format.js { render :json => grape_varieties}
+      end
+    elsif params[:color] == 'White'
+      grape_varieties = [
+        'Chardonnay', 
+        'Moscato', 
+        'Sauvignon Blanc', 
+        'Riesling', 
+        'Pinot Grigio', 
+        'Chenin Blanc', 
+        'Champagne', 
+        'Muscat'
+        ].sort
+      respond_to do |format|
+        format.js { render :json => grape_varieties}
+      end
+    else
+      grape_varieties = [
+        'White Zinfandel', 
+        'Champagne'].sort
+      respond_to do |format|
+        format.js { render :json => grape_varieties}
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wine
